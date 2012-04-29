@@ -1,0 +1,32 @@
+<html>
+  <head>
+    
+  </head>
+  
+  <body>  
+    
+    <h1>We are the Robots</h1>
+    <canvas id="pie" width="800" height="600"></canvas>   
+    
+    <script type="text/javascript">
+      var canvas = document.getElementById('pie');
+      var ctx = canvas.getContext('2d');
+      // Tank Tracks                                       
+      var tankWidth = 100
+      var tankHeight=100;
+      ctx.fillStyle='#28251C'; ctx.fillRect(0,0,tankWidth,tankHeight);
+      // Tank Body
+      ctx.fillStyle='#8E8566'; ctx.fillRect(tankWidth/4,0,tankWidth/2,tankHeight);
+      
+      // Tank Turret
+      ctx.beginPath();
+      ctx.arc(tankWidth/2,tankHeight/2,tankWidth/4,0*Math.PI,2*Math.PI);
+      ctx.fillStyle='#483F27'; ctx.fill();
+      
+      // Tank Barrel
+      var barrelWidth = tankWidth/10;
+      ctx.fillStyle='#382F17'; ctx.fillRect(tankWidth/2-barrelWidth/2,0,barrelWidth,tankHeight/2);
+      
+    </script>
+  </body>
+</html>
